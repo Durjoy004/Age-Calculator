@@ -1,0 +1,96 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #86A8E7;
+}
+.box {
+    position: relative;
+    margin: 35px auto 40px;
+    padding: 40px;
+    background: hsla(280, 84%, 41%, 1);
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1);
+    max-width: 480px;
+    border-radius: 10px;
+}
+
+.box h1 {
+    font-size: 40px;
+    margin-top: -10px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    left: -3px;
+}
+
+.box input {
+    padding: 6px;
+    width: 25%;
+    cursor: pointer;
+    outline: 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 20px;
+
+}
+
+input::-webkit-input-placeholder {
+    font-size: 17px;
+}
+
+#DAY {
+    position: relative;
+    padding: 5px;
+    width: 30%;
+    outline: 0;
+
+}
+
+#MONTH {
+    position: relative;
+    padding: 5px;
+    width: 33%;
+    left: 10px;
+    outline: 0;
+}
+
+.box button {
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 16px;
+    transition: 0.5s;
+    position: relative;
+    left: 35%;
+    width: 30%;
+}
+button:hover{
+    background-color:  #a8eb12;
+}
+
+#result {
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+    /* Transition for smooth appearing */
+    transform: translateY(0px);
+    /* Initially shifted 20px down */
+    transition: transform 0.8s ease-in-out;
+    /* Transition for smooth slide down */
+    color: #fff;
+}
+
+#result.visible {
+    opacity: 1;
+    /* Visible state */
+    transform: translateY(25px);
+    /* Back to original position */
+}
