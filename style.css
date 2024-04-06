@@ -8,8 +8,8 @@ body{
 }
 .box {
     position: relative;
-    margin: 35px auto 40px;
-    padding: 40px;
+    margin: 0 auto;
+    padding: 10px;
     background: hsla(280, 84%, 41%, 1);
     background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
@@ -20,13 +20,9 @@ body{
 }
 
 .box h1 {
-    font-size: 40px;
-    margin-top: -10px;
     color: #fff;
-    white-space: nowrap;
     text-align: center;
     position: relative;
-    left: -3px;
 }
 
 .box input {
@@ -86,11 +82,17 @@ button:hover{
     transition: transform 0.8s ease-in-out;
     /* Transition for smooth slide down */
     color: #fff;
+
 }
 
 #result.visible {
     opacity: 1;
     /* Visible state */
-    transform: translateY(25px);
+    transform: translateY(15px);
     /* Back to original position */
+}
+@media screen and (max-width:425px) {
+    #result{
+        font-size: 17px;
+    }
 }
