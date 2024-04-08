@@ -2,25 +2,27 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 body{
     background-color: #86A8E7;
-    overflow: hidden;
 }
 .box {
     position: relative;
     margin: 0 auto;
     padding: 1px;
     background: hsla(280, 84%, 41%, 1);
-    max-width: 200px;
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1);
+    max-width: 480px;
     border-radius: 10px;
 }
 
 .box h1 {
     color: #fff;
     text-align: center;
-    position: absolute;
+    position: relative;
 }
 
 .box input {
@@ -28,7 +30,7 @@ body{
     width: 25%;
     cursor: pointer;
     outline: 0;
-    position: absolute;
+    position: relative;
     font-family: Arial, Helvetica, sans-serif;
     left: 20px;
 
@@ -39,7 +41,7 @@ input::-webkit-input-placeholder {
 }
 
 #DAY {
-    position: absolute;
+    position: relative;
     padding: 5px;
     width: 30%;
     outline: 0;
@@ -47,7 +49,7 @@ input::-webkit-input-placeholder {
 }
 
 #MONTH {
-    position: absolute;
+    position: relative;
     padding: 5px;
     width: 33%;
     left: 10px;
@@ -55,14 +57,14 @@ input::-webkit-input-placeholder {
 }
 
 .box button {
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
     border: none;
     cursor: pointer;
     margin-top: 30px;
     font-size: 16px;
     transition: 0.5s;
-    position: absolute;
+    position: relative;
     left: 35%;
     width: 30%;
 }
@@ -72,9 +74,13 @@ button:hover{
 
 #result {
     opacity: 0;
+    /* Initially hidden */
     transition: opacity 0.5s ease-in-out;
+    /* Transition for smooth appearing */
     transform: translateY(0px);
+    /* Initially shifted 20px down */
     transition: transform 0.8s ease-in-out;
+    /* Transition for smooth slide down */
     color: #fff;
     text-align: center;
 
@@ -82,10 +88,12 @@ button:hover{
 
 #result.visible {
     opacity: 1;
+    /* Visible state */
     transform: translateY(4px);
+    /* Back to original position */
 }
 @media screen and (max-width:425px) {
     #result{
-        font-size: 8px;
+        font-size: 15px;
     }
 }
