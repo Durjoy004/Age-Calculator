@@ -6,15 +6,14 @@
 }
 body{
     background-color: #86A8E7;
-    background-position: center;
-    background-size: contain;
+    overflow: hidden;
 }
 .box {
     position: relative;
     margin: 0 auto;
     padding: 1px;
     background: hsla(280, 84%, 41%, 1);
-    max-width: 480px;
+    max-width: 200px;
     border-radius: 10px;
 }
 
