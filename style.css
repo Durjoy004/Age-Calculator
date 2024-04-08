@@ -6,17 +6,14 @@
 }
 body{
     background-color: #86A8E7;
-    
+    background-position: center;
+    background-size: contain;
 }
 .box {
     position: relative;
     margin: 0 auto;
     padding: 1px;
     background: hsla(280, 84%, 41%, 1);
-    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#8711C1", endColorstr="#2472FC", GradientType=1);
     max-width: 480px;
     border-radius: 10px;
 }
@@ -59,7 +56,7 @@ input::-webkit-input-placeholder {
 }
 
 .box button {
-    padding: 10px;
+    padding: 5px;
     border-radius: 3px;
     border: none;
     cursor: pointer;
@@ -90,6 +87,6 @@ button:hover{
 }
 @media screen and (max-width:425px) {
     #result{
-        font-size: 10px;
+        font-size: 8px;
     }
 }
