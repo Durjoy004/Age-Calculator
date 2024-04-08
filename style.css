@@ -2,14 +2,16 @@
     border: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     background-color: #86A8E7;
+    
 }
 .box {
     position: relative;
     margin: 0 auto;
-    padding: 10px;
+    padding: 1px;
     background: hsla(280, 84%, 41%, 1);
     background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 56%, 1) 100%);
@@ -22,7 +24,7 @@ body{
 .box h1 {
     color: #fff;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
 
 .box input {
@@ -30,7 +32,7 @@ body{
     width: 25%;
     cursor: pointer;
     outline: 0;
-    position: relative;
+    position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     left: 20px;
 
@@ -41,7 +43,7 @@ input::-webkit-input-placeholder {
 }
 
 #DAY {
-    position: relative;
+    position: absolute;
     padding: 5px;
     width: 30%;
     outline: 0;
@@ -49,7 +51,7 @@ input::-webkit-input-placeholder {
 }
 
 #MONTH {
-    position: relative;
+    position: absolute;
     padding: 5px;
     width: 33%;
     left: 10px;
@@ -64,7 +66,7 @@ input::-webkit-input-placeholder {
     margin-top: 30px;
     font-size: 16px;
     transition: 0.5s;
-    position: relative;
+    position: absolute;
     left: 35%;
     width: 30%;
 }
@@ -74,25 +76,20 @@ button:hover{
 
 #result {
     opacity: 0;
-    /* Initially hidden */
     transition: opacity 0.5s ease-in-out;
-    /* Transition for smooth appearing */
     transform: translateY(0px);
-    /* Initially shifted 20px down */
     transition: transform 0.8s ease-in-out;
-    /* Transition for smooth slide down */
     color: #fff;
+    text-align: center;
 
 }
 
 #result.visible {
     opacity: 1;
-    /* Visible state */
-    transform: translateY(15px);
-    /* Back to original position */
+    transform: translateY(4px);
 }
 @media screen and (max-width:425px) {
     #result{
-        font-size: 17px;
+        font-size: 10px;
     }
 }
